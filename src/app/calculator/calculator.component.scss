@@ -1,0 +1,17 @@
+.container {
+    margin: 0 16px;
+}
+
+.container-card {
+    max-width: 800px;
+    margin: auto;
+}
+
+.inputs-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    mat-form-field {
+        margin: 0 16px;
+    }
+}
