@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Euclidean Calculator';
+  githubText = ' Github ';
+
+  githubClicked(): void {
+    window.open('https://github.com/Ashanmaril/euclidean-calc', '_blank');
+  }
 }

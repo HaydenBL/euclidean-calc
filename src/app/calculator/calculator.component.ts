@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Observable, fromEvent, combineLatest } from 'rxjs';
-import { map, filter, debounceTime, distinctUntilChanged } from 'rxjs/operators'
+import { map, filter, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
-  selector: 'calculator',
+  selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.scss']
 })
@@ -30,12 +30,12 @@ export class CalculatorComponent implements OnInit {
     ).subscribe(([num1, num2]: [number, number]) => {
       this.output.nativeElement.innerHTML = '';
       this.log(`Solution: ${this.getGcd(num1, num2)}`);
-    })
+    });
   }
 
   log(text: string): void {
     const newItem = document.createElement('li');
-    newItem.appendChild(document.createTextNode(text))
+    newItem.appendChild(document.createTextNode(text));
     this.output.nativeElement.appendChild(newItem);
   }
 
@@ -51,7 +51,7 @@ export class CalculatorComponent implements OnInit {
     const remainder = largerNum % smallerNum;
 
     this.log(`${largerNum} = ${quotient} x ${smallerNum} + ${remainder}`);
-    this.log(`GCD(${num1}, ${num2}) = GCD(${smallerNum}, ${remainder})`)
+    this.log(`GCD(${num1}, ${num2}) = GCD(${smallerNum}, ${remainder})`);
 
     return this.getGcd(smallerNum, remainder);
   }
