@@ -2,8 +2,11 @@ mat-toolbar {
     position: fixed;
     top: 0;
     z-index: 999;
-    span {
+    .title {
         margin: auto;
+    }
+    button, .filler {
+        width: 107px;
     }
 }
 .github-logo {

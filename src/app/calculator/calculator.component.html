@@ -2,10 +2,20 @@
   <mat-card class="container-card">
     <form class="inputs-form">
       <mat-form-field>
-        <input matInput placeholder="Value 1" #input1>
+        <input matInput
+          placeholder="Value 1"
+          [errorStateMatcher]="errorStateMatcher"
+          [formControl]="input1Control"
+          #input1>
+        <mat-error *ngIf="input1Control.hasError('invalidInput')">Invalid input</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Value 2" #input2>
+        <input matInput
+        placeholder="Value 2"
+        [errorStateMatcher]="errorStateMatcher"
+        [formControl]="input2Control"
+        #input2>
+        <mat-error *ngIf="input2Control.hasError('invalidInput')">Invalid input</mat-error>
       </mat-form-field>
     </form>
 
