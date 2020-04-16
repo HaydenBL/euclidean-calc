@@ -10,6 +10,6 @@ export class AppComponent {
   githubText = ' Github ';
 
   githubClicked(): void {
-    window.open('https://github.com/Ashanmaril/euclidean-calc', '_blank');
+    window.open('https://github.com/HaydenBL/euclidean-calc', '_blank');
   }
 }
